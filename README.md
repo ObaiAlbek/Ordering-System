@@ -56,11 +56,13 @@ classDiagram
     }
 
 
-    %% ===== RELATIONSHIPS =====
+   %% ===== RELATIONSHIPS =====
 
-    Kunde "1" --> "*" Bestellung : gibt auf
-    Bestellung "1" --> "*" BestellPosition : enthält
-    BestellPosition "*" --> "1" Gericht : Gericht
+    Kunde "1" --> "*" Bestellung : gibt_auf
+    Bestellung "1" --> "*" BestellPosition : enthaelt
+    BestellPosition "*" --> "1" Gericht : gericht
     Bestellung "1" --> "1" Zahlung : bezahlt
-    Bestellung "1" --> "1" Lieferung : Lieferung
+    Bestellung "1" --> "1" Lieferung : lieferung
     Lieferung "*" --> "1" Lieferant : liefert
+
+    Koch "*" --> "*" Gericht : kocht
